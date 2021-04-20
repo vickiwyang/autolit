@@ -1,0 +1,19 @@
+USER STORY
+
+1. As a user, I should be able to enter comma-separated DOIs of my seed articles.
+
+2. As a user, I expect to get back:
+- My seed articles
+- Well-known ancestors: articles cited by my seed articles with high citation counts (top 3 from each article)
+- Well-known descendants: articles citing my seed articles with high citation counts (top 3 from each article)
+- 1st degree shared ancestors (common citations)
+- 1st degree shared descendants (common cited-by)
+
+3. For each article, the user should see the following information:
+- Title
+- Authors
+- Year
+- Journal
+- DOI
+
+FRONT-END
