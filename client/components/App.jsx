@@ -4,7 +4,11 @@ class App extends Component {
 
   render() {
 
-    return ();
+    return (
+      <div>
+        <h3>This is a placeholder</h3>
+      </div>
+    );
   }
 }
 
