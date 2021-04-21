@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const seedController = require('./controllers/seedController');
+const ancestorController = require('./controllers/ancestorController');
 
 const PORT = 3000;
 const MONGO_URI = 'mongodb+srv://vyang:89M5quuC1LjlsXyi@cluster0.q6zwo.mongodb.net/autolit?retryWrites=true&w=majority';
@@ -31,10 +32,10 @@ if (process.env.NODE_ENV === 'production') {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // clear previous seeds in database and set new seeds
-app.post('/seed', seedController.clearSeeds, seedController.setSeeds, (req, res) => {
+app.post('/seed', seedController.clearSeeds, seedController.setSeeds, ancestorController.getRefs, (req, res) => {
   // do something upon successfully setting seeds
   console.log("Posting new seeds...")
-  res.status(200).send('Successfully set seeds');
+  res.status(200).redirect('/'); // WORKAROUND: refreshes the page
 });
 
 // 404 handler

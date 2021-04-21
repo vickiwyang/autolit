@@ -23,9 +23,20 @@ const seedsSchema = new Schema({
   journal: String
 });
 // create model for the 'seeds' collection that will be exported
-const Seeds = mongoose.model('seeds', seedsSchema)
+const Seeds = mongoose.model('seeds', seedsSchema);
+
+const ancestorsSchema = new Schema({
+  doi: {type: String, required: true},
+  title: String,
+  authors: String,
+  pub_date: Date,
+  journal: String
+});
+
+const Ancestors = mongoose.model('ancestors', ancestorsSchema)
 
 // export models for use in the controller
 module.exports = {
-  Seeds
+  Seeds,
+  Ancestors
 };

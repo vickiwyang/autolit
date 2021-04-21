@@ -17,16 +17,13 @@ seedController.setSeeds = (req, res, next) => {
   console.log("request body: ", req.body);
   const seeds = req.body.seeds.split(",");
   for (let i = 0; i < seeds.length; i++) {
-    seeds[i].trim();
+    seeds[i] = seeds[i].trim();
   }
   res.locals.seeds = seeds;
   //res.locals.seeds = req.body.seeds;
 
   // array of new seeds
   const newSeeds = [];
-  // const newSeed = {
-  //   doi: req.body.seeds
-  // };
   for (let i = 0; i < seeds.length; i++) {
     let newSeed = {};
     newSeed.doi = seeds[i];

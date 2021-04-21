@@ -9,14 +9,27 @@
     <li>Enter the DOIs of 2-5 research articles (separated by commas) in an area that you would like to read more about.</li>
     <li>Get a list of recommendations on what to read next. Easy!</li>
   </ol>
-  <form method='POST' action='/seed'>
-    <input name="seeds" type="text" placeholder="Seed Articles"></input>
-    <input type='submit' value='Plant Seeds'></button>
+  <form id='seed-form' method='POST' action='/seed'>
+    <input name='seeds' type='text' placeholder='Seed Articles'></input>
+    <input type='submit' value='Plant Seeds'>
   </form>
   <div id="root"></div>
 
   <!-- script for webpack and webpack-dev-server challenge -->
   <script src="build/bundle.js"></script>
+  <!--
+  <script>
+    // const form = document.getElementById('seed-form');
+    // form.addEventListener('submit', e => {
+    //   e.preventDefault();
+    //   // let form = e.target;
+    //   // let errors = false;
+    //   // if (!errors) {
+    //   //   form.submit();
+    //   // }
+    // });
+  </script>
+  -->
 
 </body>
 </html>

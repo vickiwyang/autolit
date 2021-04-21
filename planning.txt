@@ -17,3 +17,30 @@ USER STORY
 - DOI
 
 FRONT-END
+
+BACK-END
+
+Example search: "I want to learn about novel approaches to social network analysis using Big Data."
+10.1073/pnas.0900282106, 10.1073/pnas.1320040111
+
+10.1073/pnas.0900282106
+"Inferring friendship network structure by using mobile phone data"
+(Eagle et al. 2009)
+
+13 citations
+
+10.1073/pnas.1320040111
+"Experimental evidence of massive-scale emotional contagion through social networks"
+(Kramer et al. 2014)
+
+10 citations
+
+10.1126/science.1185231
+"The Spread of Behavior in an Online Social Network Experiment"
+(Centola 2010)
+
+20 citations
+
+From 43 articles...
+=> 9 well-known ancestors
+=> ?? 1st degree shared ancestors
