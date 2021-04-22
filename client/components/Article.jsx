@@ -8,8 +8,8 @@ const Article = ({ info }) => {
     <article className="artCard">
       <ul className="artDetailsList">
         <li className="artHeader">DOI: {doi}</li>
-        <li className="artDetail">Citation Count: {citation_count}</li>
-        <li className={"commons"+commons}>Common: {commons}</li>
+        <li className={`${citation_count > 10000 ? "over10000Cites" : citation_count > 1000 ? "over1000Cites" : citation_count > 500 ? "over500Cites" : "under500Cites"}`}>Citation Count: {citation_count}</li>
+        <li className={`${commons > 1 ? "someCommons" : "noCommons"}`}>Common: {commons}</li>
       </ul>
     </article>
   );

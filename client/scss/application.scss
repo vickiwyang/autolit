@@ -3,6 +3,9 @@
 $prussianBlue: #00537A;
 $prussianLighter: #92d0ec;
 $darkWarmGray: #8c7d70;
+$paleYellow: #FFFDD3;
+$tangerine: #FFB234;
+$boldOrange: #F58212;
 
 body {
   background: $prussianBlue;
@@ -21,7 +24,6 @@ h1 {
 ol {
   color: darken( $darkWarmGray, 25% );
 }
-
 
 #instructions-container {
   background-color: lighten( $prussianBlue, 50% );
@@ -59,7 +61,7 @@ input:focus {
 }
 
 #seed-btn {
-  background-color: gold;
+  background-color: darken($paleYellow, 20%);
   color: darken( $darkWarmGray, 25% );
   border: none;
   font-size: 0.6em;
@@ -100,7 +102,22 @@ input:focus {
   background-color: darken( $darkWarmGray, 20% );
 }
 
-.commons2, .commons3, .commons4, .commons5 {
-  background-color: aquamarine;
+.someCommons {
+  background-color: palegreen;
+  color: darken( $darkWarmGray, 20% );
+}
+
+// .over500Cites {
+//   background-color: $paleYellow;
+//   color: darken( $darkWarmGray, 20% );
+// }
+
+.over1000Cites {
+  background-color: $paleYellow;
+  color: darken( $darkWarmGray, 20% );
+}
+
+.over10000Cites {
+  background-color: darken($paleYellow, 20%);
   color: darken( $darkWarmGray, 20% );
 }

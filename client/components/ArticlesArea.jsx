@@ -19,7 +19,7 @@ class ArticlesArea extends Component {
       return res.json();
     })
     .then((articles) => {
-      console.log("React got the articles: ", articles);
+      console.log("React got the articles: ", articles); // why doesn't this appear?
       if (!Array.isArray(articles)) articles = [];
       return this.setState({
         articles,
@@ -56,11 +56,11 @@ class ArticlesArea extends Component {
   }
 
   render() {
-    // if (!this.state.fetchedArticles) return (
-    //   <div>
-    //     <h2>Loading data, please wait...</h2>
-    //   </div>
-    // );
+    if (!this.state.fetchedArticles) return (
+      <div>
+        <h2>Data will appear here</h2>
+      </div>
+    );
 
     const { articles } = this.state;
 
