@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const apiRouter = require('./routes/api');
+
 const path = require("path");
 const bodyParser = require("body-parser");
 
@@ -36,6 +38,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// route handler
+app.use('/api', apiRouter);
 
 // clear previous seeds in database and set new seeds
 // get ancestors, process ancestors and find commons

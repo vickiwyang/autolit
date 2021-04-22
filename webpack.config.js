@@ -34,6 +34,7 @@ module.exports = {
     publicPath: '/build',
     proxy: {
       '/seed': 'http://localhost:3000',
+      '/api': 'http://localhost:3000'
     },
   },
   resolve: {
