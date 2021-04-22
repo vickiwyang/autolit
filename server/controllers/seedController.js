@@ -1,4 +1,4 @@
-const models = require('../models/articleModel');
+const models = require("../models/articleModel");
 
 const seedController = {};
 
@@ -9,7 +9,7 @@ seedController.clearSeeds = (req, res, next) => {
       return next();
     })
     .catch((err) => res.status(400).send(`error in seedController: ${err}`));
-}
+};
 
 seedController.setSeeds = (req, res, next) => {
   // parse comma-separated DOIs from req.body
@@ -31,13 +31,11 @@ seedController.setSeeds = (req, res, next) => {
   }
 
   //console.log(newSeeds);
-  models.Seeds.create(newSeeds,
-    (err, data) => {
-      if (err) res.status(400).send(`error in seedController: ${err}`);
-      data = newSeeds;
-      return next();
-    }
-  );
-}
+  models.Seeds.create(newSeeds, (err, data) => {
+    if (err) res.status(400).send(`error in seedController: ${err}`);
+    data = newSeeds;
+    return next();
+  });
+};
 
 module.exports = seedController;

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import Articles from './ArticlesArea';
 
 class App extends Component {
 
