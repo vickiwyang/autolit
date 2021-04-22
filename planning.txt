@@ -21,7 +21,7 @@ FRONT-END
 BACK-END
 
 Example search: "I want to learn about novel approaches to social network analysis using Big Data."
-10.1073/pnas.0900282106, 10.1073/pnas.1320040111
+10.1073/pnas.0900282106, 10.1073/pnas.1320040111, 10.1126/science.1185231
 
 10.1073/pnas.0900282106
 "Inferring friendship network structure by using mobile phone data"

@@ -5,7 +5,7 @@ const seedController = {};
 seedController.clearSeeds = (req, res, next) => {
   models.Seeds.deleteMany({})
     .then(() => {
-      console.log("Older seeds cleared from database");
+      console.log("Past seeds cleared from database");
       return next();
     })
     .catch((err) => res.status(400).send(`error in seedController: ${err}`));
@@ -37,7 +37,7 @@ seedController.setSeeds = (req, res, next) => {
       data = newSeeds;
       return next();
     }
-  )
+  );
 }
 
 module.exports = seedController;

@@ -6,7 +6,7 @@ class App extends Component {
 
     return (
       <div>
-        <h3>This is a placeholder</h3>
+        <h3>Data goes here...</h3>
       </div>
     );
   }

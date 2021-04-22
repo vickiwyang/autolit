@@ -27,6 +27,8 @@ const Seeds = mongoose.model('seeds', seedsSchema);
 
 const ancestorsSchema = new Schema({
   doi: {type: String, required: true},
+  commons: {type: Number, required: true},
+  citation_count: {type: Number, required: true},
   title: String,
   authors: String,
   pub_date: Date,

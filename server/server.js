@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+
 const mongoose = require('mongoose');
+mongoose.set('useFindAndModify', false);
 
 const seedController = require('./controllers/seedController');
 const ancestorController = require('./controllers/ancestorController');
@@ -32,9 +34,10 @@ if (process.env.NODE_ENV === 'production') {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // clear previous seeds in database and set new seeds
-app.post('/seed', seedController.clearSeeds, seedController.setSeeds, ancestorController.getRefs, (req, res) => {
+// get ancestors, process ancestors and find commons
+app.post('/seed', seedController.clearSeeds, ancestorController.clearAncestors, seedController.setSeeds, ancestorController.getRefs, (req, res) => {
   // do something upon successfully setting seeds
-  console.log("Posting new seeds...")
+  console.log("Posting new seeds...");
   res.status(200).redirect('/'); // WORKAROUND: refreshes the page
 });
 

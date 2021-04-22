@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
+
 $prussianBlue: #00537A;
+$prussianLighter: #92d0ec;
+$darkWarmGray: #8c7d70;
 
 body {
   background: $prussianBlue;
@@ -7,5 +11,61 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 1.8em;
+}
+
+h1 {
+  font-family: 'B612 Mono', monospace;
+}
+
+ol {
+  color: darken( $darkWarmGray, 25% );
+}
+
+#instructions-container {
+  background-color: lighten( $prussianBlue, 50% );
+  padding: 1em;
+  margin-bottom: 2em;
+  width: 60%;
+}
+
+#try-text {
+  font-size: 0.75em;
+}
+
+#emph-text {
+  background-color: $darkWarmGray;
+}
+
+#seed-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#seed-input {
+  width: 75%;
+  height: 3em;
+  padding-left: 1em;
+  margin-right: 1em;
+  border: 0.3em solid $prussianLighter;
+  font-size: 0.6em;
+}
+
+input:focus {
+  outline: none;
+}
+
+#seed-btn {
+  background-color: gold;
+  color: darken( $darkWarmGray, 25% );
+  border: none;
+  font-size: 0.6em;
+  padding: 0.4em;
+}
+
+#seed-btn:hover {
+  background-color: $darkWarmGray;
+  color: white;
 }

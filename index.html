@@ -5,13 +5,16 @@
 </head>
 <body>
   <h1>AutoLit</h1>
-  <ol>
-    <li>Enter the DOIs of 2-5 research articles (separated by commas) in an area that you would like to read more about.</li>
-    <li>Get a list of recommendations on what to read next. Easy!</li>
-  </ol>
+  <div id='instructions-container'>
+    <ol>
+      <li>Enter the DOIs of 2-5 research articles (separated by commas) in an area that you would like to read more about.</li>
+      <li>Get a list of recommendations on what to read next. Easy!</li>
+    </ol>
+  </div>
+  <p id='try-text'>Try it out with these three articles on <span id='emph-text'>social network analysis using Big Data</span>:<br>10.1073/pnas.0900282106, 10.1073/pnas.1320040111, 10.1126/science.1185231</p>
   <form id='seed-form' method='POST' action='/seed'>
-    <input name='seeds' type='text' placeholder='Seed Articles'></input>
-    <input type='submit' value='Plant Seeds'>
+    <input id='seed-input' name='seeds' type='text' placeholder='Seed Articles'></input>
+    <input id='seed-btn' type='submit' value='Plant Seeds'>
   </form>
   <div id="root"></div>
 

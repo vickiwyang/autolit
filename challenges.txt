@@ -1,4 +1,6 @@
 1. Sending a post request (posting some data to my database) without redirecting or refreshing the page.
 - Current workaround: redirected to same page
 2. Sending requests to an external API within my route handler
-- Current workaround: request package (deprecated)
+- Current workaround: request package (deprecated) => node-fetch
+3. Middleware and callback hell
+- Was I doing too much in my middleware? Did I have too many middlewares in the server request?
