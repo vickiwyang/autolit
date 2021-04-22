@@ -1,3 +1,4 @@
+import { reduce } from "async";
 import React from "react";
 
 const Article = ({ info }) => {
@@ -6,9 +7,9 @@ const Article = ({ info }) => {
   return (
     <article className="artCard">
       <ul className="artDetailsList">
-        <li className="artDetail">DOI: {doi}</li>
+        <li className="artHeader">DOI: {doi}</li>
         <li className="artDetail">Citation Count: {citation_count}</li>
-        <li className="artDetail">Common: {commons}</li>
+        <li className={"commons"+commons}>Common: {commons}</li>
       </ul>
     </article>
   );

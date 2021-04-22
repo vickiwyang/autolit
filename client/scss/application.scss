@@ -22,6 +22,7 @@ ol {
   color: darken( $darkWarmGray, 25% );
 }
 
+
 #instructions-container {
   background-color: lighten( $prussianBlue, 50% );
   padding: 1em;
@@ -68,4 +69,38 @@ input:focus {
 #seed-btn:hover {
   background-color: $darkWarmGray;
   color: white;
+}
+
+#loading-msg{
+  margin: auto;
+  width: 80%;
+}
+
+#loading-p {
+  font-size: 0.8em;
+}
+
+.artContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.artCard {
+  border: 0.1em solid $prussianLighter;;
+}
+
+.artDetailsList {
+  list-style: none;
+  font-size: 0.8em;
+}
+
+.artHeader {
+  background-color: darken( $darkWarmGray, 20% );
+}
+
+.commons2, .commons3, .commons4, .commons5 {
+  background-color: aquamarine;
+  color: darken( $darkWarmGray, 20% );
 }

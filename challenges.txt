@@ -4,3 +4,7 @@
 - Current workaround: request package (deprecated) => node-fetch
 3. Middleware and callback hell
 - Was I doing too much in my middleware? Did I have too many middlewares in the server request?
+4. Challenges: Getting React to fetch and render my data correctly
+- Since the fetch call was in componentDidMount, subsequent inputs weren't updating the rendered view. Current workaround is to have React call fetch and re-render every second, but I don't think that's very efficient (why query my database if the input hasn't changed?)
+- Figured out conditional styling of "dumb" (stateless) React components
+- Future: Grabbing more article information (title, authors, year)
